@@ -40,9 +40,21 @@ class DashboardHome extends StatelessWidget {
           // ===== Coming Requests =====
           sectionHeader(context, "Coming Requests"),
           const SizedBox(height: 10),
-         
-          requestCard(context, "Rice Bowls", "23 Aug, 10:30 PM", "x20", "Resala Charity"),
-          requestCard(context, "Chicken Soup", "23 Aug, 10:30 PM", "x15", "Orman Association"),
+
+          requestCard(
+            context,
+            "Rice Bowls",
+            "23 Aug, 10:30 PM",
+            "x20",
+            "Resala Charity",
+          ),
+          requestCard(
+            context,
+            "Chicken Soup",
+            "23 Aug, 10:30 PM",
+            "x15",
+            "Orman Association",
+          ),
 
           const SizedBox(height: 20),
 
@@ -56,13 +68,20 @@ class DashboardHome extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               children: [
                 donatedDish(
+                  context,
                   "Meat & Potatoes",
                   "x20",
                   "One meal feeds up to 4",
                   "Free",
                 ),
                 const SizedBox(width: 10),
-                donatedDish("Breakfast", "x1", "Feeds 1 person", "15£ Each"),
+                donatedDish(
+                  context,
+                  "Breakfast",
+                  "x1",
+                  "Feeds 1 person",
+                  "15£ Each",
+                ),
               ],
             ),
           ),

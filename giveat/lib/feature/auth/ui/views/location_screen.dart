@@ -15,6 +15,7 @@ class _LocationScreenState extends State<LocationScreen> {
   GoogleMapController? _mapController;
   LatLng? _currentPosition;
   String _address = "";
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
@@ -25,12 +26,7 @@ class _LocationScreenState extends State<LocationScreen> {
   Future<void> _getCurrentLocation() async {
     try {
       bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
-      if (!serviceEnabled) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Location services are disabled")),
-        );
-        return;
-      }
+      if (!serviceEnabled) return;
 
       LocationPermission permission = await Geolocator.checkPermission();
       if (permission == LocationPermission.denied) {
@@ -48,26 +44,36 @@ class _LocationScreenState extends State<LocationScreen> {
         _currentPosition = LatLng(position.latitude, position.longitude);
       });
 
-      // تحويل إحداثيات لعنوان
-      List<Placemark> placemarks = await placemarkFromCoordinates(
-        position.latitude,
-        position.longitude,
-      );
-      if (placemarks.isNotEmpty) {
-        setState(() {
-          _address =
-              "${placemarks.first.street}, ${placemarks.first.locality}, ${placemarks.first.country}";
-        });
-      }
+      _getAddressFromLatLng(position.latitude, position.longitude);
     } catch (e) {
       debugPrint("Error: $e");
+    }
+  }
+
+  Future<void> _getAddressFromLatLng(double lat, double lng) async {
+    List<Placemark> placemarks = await placemarkFromCoordinates(lat, lng);
+    if (placemarks.isNotEmpty) {
+      setState(() {
+        _address =
+            "${placemarks.first.street}, ${placemarks.first.locality}, ${placemarks.first.country}";
+        _searchController.text = _address;
+      });
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Pick Location")),
+      appBar: AppBar(
+        leading: const BackButton(color: Colors.black),
+        title: const Text(
+          "Location",
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
       body: _currentPosition == null
           ? const Center(child: CircularProgressIndicator())
           : Stack(
@@ -78,22 +84,37 @@ class _LocationScreenState extends State<LocationScreen> {
                     target: _currentPosition!,
                     zoom: 15,
                   ),
-                  myLocationEnabled: true, // يظهر النقطة الزرقاء لمكانك
-                  myLocationButtonEnabled: true,
+                  myLocationEnabled: true,
+                  myLocationButtonEnabled: false,
                   markers: {
                     Marker(
                       markerId: const MarkerId("currentLocation"),
                       position: _currentPosition!,
-                      infoWindow: InfoWindow(title: "You are here"),
+                      infoWindow: const InfoWindow(title: "You are here"),
                     ),
                   },
                 ),
+                // Search Bar
                 Positioned(
                   top: 20,
                   left: 15,
                   right: 15,
                   child: Column(
                     children: [
+                      TextField(
+                        controller: _searchController,
+                        readOnly: true,
+                        decoration: InputDecoration(
+                          prefixIcon: const Icon(Icons.search),
+                          filled: true,
+                          fillColor: Colors.white,
+                          hintText: "Search",
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                      ),
                       if (_address.isNotEmpty)
                         Container(
                           margin: const EdgeInsets.only(top: 8),
@@ -107,7 +128,10 @@ class _LocationScreenState extends State<LocationScreen> {
                           ),
                           child: Row(
                             children: [
-                              const Icon(Icons.location_on, color: Colors.red),
+                              const Icon(
+                                Icons.location_on,
+                                color: Colors.green,
+                              ),
                               const SizedBox(width: 8),
                               Expanded(
                                 child: Text(
@@ -121,6 +145,21 @@ class _LocationScreenState extends State<LocationScreen> {
                     ],
                   ),
                 ),
+                // Locate Me button
+                Positioned(
+                  bottom: 100,
+                  right: 15,
+                  child: FloatingActionButton.extended(
+                    onPressed: _getCurrentLocation,
+                    backgroundColor: Colors.white,
+                    icon: const Icon(Icons.my_location, color: Colors.green),
+                    label: const Text(
+                      "Locate me",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                ),
+                // Confirm button
                 Positioned(
                   bottom: 30,
                   left: 20,
@@ -131,9 +170,15 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primaryColor,
-                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
-                    child: const Text("Confirm Location", style: TextStyle(fontSize: 18, color: Colors.white),)
+                    child: const Text(
+                      "Confirm",
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
                   ),
                 ),
               ],
