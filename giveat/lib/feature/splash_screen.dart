@@ -16,7 +16,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // بعد 3 ثواني يروح على صفحة اللوجين
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,

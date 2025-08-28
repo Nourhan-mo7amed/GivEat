@@ -57,7 +57,6 @@ class _BusinessDetailsScreenState extends State<BusinessDetailsScreen> {
               ),
               const SizedBox(height: 20),
 
-              // TextFields باستخدام ReusableTextField
               ReusableTextField(
                 labelText: "Business Name",
                 controller: nameController,
@@ -75,16 +74,16 @@ class _BusinessDetailsScreenState extends State<BusinessDetailsScreen> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
-                 onPressed: () async {
-  final selectedLocation = await Navigator.push(
-    context,
-    MaterialPageRoute(builder: (_) => const LocationScreen()),
-  );
+                  onPressed: () async {
+                    final selectedLocation = await Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const LocationScreen()),
+                    );
 
-  if (selectedLocation != null) {
-    print("User selected: $selectedLocation");
-  }
-},
+                    if (selectedLocation != null) {
+                      print("User selected: $selectedLocation");
+                    }
+                  },
 
                   icon: const Icon(Icons.location_on, color: Colors.white),
                   label: const Text(
@@ -114,7 +113,7 @@ class _BusinessDetailsScreenState extends State<BusinessDetailsScreen> {
               // Checkboxes
               Wrap(
                 spacing: 0,
-                runSpacing: 4, // مسافة بسيطة بين الصفوف
+                runSpacing: 4,
                 children: foodTypes.keys.map((key) {
                   return Row(
                     mainAxisSize: MainAxisSize.min,
@@ -126,20 +125,14 @@ class _BusinessDetailsScreenState extends State<BusinessDetailsScreen> {
                             foodTypes[key] = value ?? false;
                           });
                         },
-                        side: const BorderSide(
-                          color: Colors.grey,
-                          width: 1.5,
-                        ), // البوردر رمادي
-                        fillColor: MaterialStateProperty.all(
-                          Colors.white,
-                        ), // خلفية المربع بيضاء
-                        checkColor: AppColors.primaryColor, // لون علامة الصح
-                        materialTapTargetSize:
-                            MaterialTapTargetSize.shrinkWrap, // يقلل المساحة
+                        side: const BorderSide(color: Colors.grey, width: 1.5),
+                        fillColor: MaterialStateProperty.all(Colors.white),
+                        checkColor: AppColors.primaryColor,
+                        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         visualDensity: const VisualDensity(
                           horizontal: -4,
                           vertical: -4,
-                        ), // يخلي المربع أصغر
+                        ),
                       ),
                       Text(
                         key,
@@ -147,7 +140,7 @@ class _BusinessDetailsScreenState extends State<BusinessDetailsScreen> {
                           fontSize: 14,
                           color: foodTypes[key]!
                               ? AppColors.primaryColor
-                              : Colors.grey, // النص رصاصي
+                              : Colors.grey,
                         ),
                       ),
                     ],
@@ -196,7 +189,7 @@ class _BusinessDetailsScreenState extends State<BusinessDetailsScreen> {
                             actions: [
                               TextButton(
                                 onPressed: () {
-                                  Navigator.pop(context); // غلق الديالوج
+                                  Navigator.pop(context);
                                 },
                                 child: const Text("Cancel"),
                               ),
@@ -206,9 +199,7 @@ class _BusinessDetailsScreenState extends State<BusinessDetailsScreen> {
                                     setState(() {
                                       dishes.add(dishController.text.trim());
                                     });
-                                    Navigator.pop(
-                                      context,
-                                    ); // غلق الديالوج بعد الإضافة
+                                    Navigator.pop(context);
                                   }
                                 },
                                 child: const Text("Add"),

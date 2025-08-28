@@ -8,7 +8,7 @@ class ForgetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-           backgroundColor: Colors.white,
+      backgroundColor: Colors.white,
 
       appBar: AppBar(backgroundColor: AppColors.backgroundColor),
       body: Padding(
@@ -91,9 +91,7 @@ class OptionTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        border: Border.all(
-          color: AppColors.primaryColor,
-        ), // استخدام اللون من ملف الألوان
+        border: Border.all(color: AppColors.primaryColor),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
@@ -121,10 +119,7 @@ class OptionTile extends StatelessWidget {
             ),
           ),
           if (isSelected)
-            const Icon(
-              Icons.check_circle,
-              color: Color(0xff003B5C),
-            ), // يمكن استبداله بـ AppColors.secondaryColor
+            const Icon(Icons.check_circle, color: Color(0xff003B5C)),
         ],
       ),
     );

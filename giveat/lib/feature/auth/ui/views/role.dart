@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../color.dart';
-import 'signup.dart'; // استيراد ملف الألوان
-
+import 'signup.dart'; 
 class RoleSelectionScreen extends StatefulWidget {
   const RoleSelectionScreen({super.key});
 
@@ -24,12 +23,12 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
               const SizedBox(height: 130),
               const Text(
                 "Sign Up As",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold), 
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               const Text(
                 "Choose your role to continue",
-                style: TextStyle(color: Colors.grey, fontSize: 20), 
+                style: TextStyle(color: Colors.grey, fontSize: 20),
               ),
               const SizedBox(height: 30),
               Row(
@@ -42,12 +41,12 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
               const SizedBox(height: 30),
               SizedBox(
                 width: double.infinity,
-                height: 50, // نفس ارتفاع الأزرار السابقة
+                height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.primaryColor, // اللون الجديد #17A87D
+                    backgroundColor: AppColors.primaryColor,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // نفس الزوايا المستديرة
+                      borderRadius: BorderRadius.circular(12),
                     ),
                     padding: const EdgeInsets.symmetric(vertical: 5),
                   ),
@@ -55,9 +54,7 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
                     if (selectedRole != null) {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => const SignUp(), // توجيه إلى SignUp
-                        ),
+                        MaterialPageRoute(builder: (context) => const SignUp()),
                       );
                     }
                   },
@@ -66,10 +63,10 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
                     children: [
                       Text(
                         "Next",
-                        style: TextStyle(fontSize: 20, color: Colors.white), // زيادة الحجم
+                        style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
                       SizedBox(width: 8),
-                      Icon(Icons.arrow_forward, color: Colors.white), // إضافة لون للأيقونة
+                      Icon(Icons.arrow_forward, color: Colors.white),
                     ],
                   ),
                 ),
@@ -87,7 +84,7 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
                       TextSpan(
                         text: "Login",
                         style: TextStyle(
-                          color: AppColors.primaryColor, // استخدام اللون الجديد
+                          color: AppColors.primaryColor,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -112,9 +109,9 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
         });
       },
       child: Container(
-        width: 150, // زيادة العرض قليلاً للتوافق
-        height: 250, // زيادة الارتفاع لتتماشى مع التصميم
-        padding: const EdgeInsets.all(15), // زيادة التباعد الداخلي
+        width: 150,
+        height: 250,
+        padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           border: Border.all(
             color: isSelected ? AppColors.primaryColor : Colors.grey.shade300,
@@ -126,13 +123,13 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(imagePath, height: 120), // زيادة حجم الصورة
+            Image.asset(imagePath, height: 120),
             const SizedBox(height: 20),
             Text(
               role,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 18, // زيادة حجم النص
+                fontSize: 18,
                 color: isSelected ? AppColors.primaryColor : Colors.black,
               ),
             ),

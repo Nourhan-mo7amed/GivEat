@@ -52,8 +52,7 @@ class OTP_Page extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        AppColors.primaryColor, // استخدام اللون الجديد #17A87D
-                    shape: RoundedRectangleBorder(
+                        AppColors.primaryColor,  shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     padding: const EdgeInsets.symmetric(vertical: 5),
@@ -73,8 +72,7 @@ class OTP_Page extends StatelessWidget {
                     "Re-send Code",
                     style: TextStyle(
                       color: AppColors
-                          .primaryColor, // استخدام اللون من ملف الألوان
-                      fontWeight: FontWeight.bold,
+                          .primaryColor,   fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:giveat/feature/auth/ui/views/login.dart';
 import '../../../../color.dart';
-import '../widgets/reusable_text_field.dart'; // استيراد مكون ReusableTextField
-import 'NextPage.dart';
+import '../widgets/reusable_text_field.dart';import 'NextPage.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -113,7 +112,7 @@ class _SignUpState extends State<SignUp> {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        AppColors.primaryColor, // استخدام اللون الجديد #17A87D
+                        AppColors.primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -166,7 +165,7 @@ class _SignUpState extends State<SignUp> {
                           "Login",
                           style: TextStyle(
                             color: AppColors
-                                .primaryColor, // استخدام اللون من ملف الألوان
+                                .primaryColor, 
                             fontWeight: FontWeight.bold,
                           ),
                         ),

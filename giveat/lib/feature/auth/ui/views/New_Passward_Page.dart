@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../color.dart';
-import '../widgets/reusable_text_field.dart'; // استيراد مكون ReusableTextField
-
+import '../widgets/reusable_text_field.dart';
 class New_Passward extends StatefulWidget {
   const New_Passward({super.key});
 
@@ -57,8 +56,7 @@ class _New_PasswardState extends State<New_Passward> {
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        AppColors.primaryColor, // استخدام اللون الجديد #17A87D
-                    shape: RoundedRectangleBorder(
+                        AppColors.primaryColor, shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     padding: const EdgeInsets.symmetric(vertical: 5),
