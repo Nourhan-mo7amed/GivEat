@@ -3,7 +3,7 @@ import 'package:giveat/feature/auth/ui/views/Forget_Page.dart';
 import 'package:giveat/feature/auth/ui/views/role.dart';
 import '../../../../color.dart';
 import '../widgets/reusable_text_field.dart';
-import 'dashbord.dart';
+import '../../../home/ui/views/dashbord.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -80,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => dashboard()),
+                    MaterialPageRoute(builder: (context) => DashboardScreen()),
                   );
                 },
                 style: ElevatedButton.styleFrom(

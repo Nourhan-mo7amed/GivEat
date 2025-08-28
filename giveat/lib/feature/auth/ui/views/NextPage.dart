@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../color.dart';
-import '../../../home/ui/views/BusinessDetailsScreen.dart';
+import 'BusinessDetailsScreen.dart';
 import '../widgets/reusable_text_field.dart';
 
 class NextPage extends StatefulWidget {

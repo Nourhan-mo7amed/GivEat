@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../color.dart';
-import '../../../auth/ui/widgets/reusable_text_field.dart';
+import '../widgets/reusable_text_field.dart';
 import 'location_screen.dart';
 
 class BusinessDetailsScreen extends StatefulWidget {
