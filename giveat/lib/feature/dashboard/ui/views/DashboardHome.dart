@@ -40,18 +40,9 @@ class DashboardHome extends StatelessWidget {
           // ===== Coming Requests =====
           sectionHeader(context, "Coming Requests"),
           const SizedBox(height: 10),
-          requestCard(
-            "Rice Bowls",
-            "23 Aug, 10:30 PM",
-            "x20",
-            "Resala Charity",
-          ),
-          requestCard(
-            "Chicken Soup",
-            "23 Aug, 10:30 PM",
-            "x15",
-            "Orman Association",
-          ),
+         
+          requestCard(context, "Rice Bowls", "23 Aug, 10:30 PM", "x20", "Resala Charity"),
+          requestCard(context, "Chicken Soup", "23 Aug, 10:30 PM", "x15", "Orman Association"),
 
           const SizedBox(height: 20),
 

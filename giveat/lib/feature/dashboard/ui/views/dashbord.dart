@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:giveat/color.dart';
+import 'ChatScreen.dart';
 import 'DashboardHome.dart';
+import 'ProfileScreen.dart';
 import 'RequestsScreen.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -60,38 +62,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ],
       ),
       body: _screens[_currentIndex], // ✅ كل مرة يغير محتوى البودي
-    );
-  }
-}
-
-class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          "This is Chat Screen",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-      ),
-    );
-  }
-}
-
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          "This is Profile Screen",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-      ),
     );
   }
 }

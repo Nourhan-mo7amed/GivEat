@@ -18,25 +18,11 @@ class RequestsScreen extends StatelessWidget {
             const SearchBarWidget(),
 
             const SizedBox(height: 30),
-            requestCard(
-              "Rice Bowls",
-              "23 Aug, 10:30 PM",
-              "x20",
-              "Resala Charity",
-            ),
-            requestCard(
-              "Chicken Soup",
-              "23 Aug, 10:30 PM",
-              "x15",
-              "Orman Association",
-            ),
-            requestCard(
-              "Besella",
-              "23 Aug, 10:30 PM",
-              "x15",
-              "Orman Association",
-            ),
-            requestCard("Meat", "23 Aug, 10:30 PM", "x15", "Orman Association"),
+           requestCard(context, "Rice Bowls", "23 Aug, 10:30 PM", "x20", "Resala Charity"),
+
+          requestCard(context, "Rice Bowls", "23 Aug, 10:30 PM", "x20", "Resala Charity"),
+          requestCard(context, "Chicken Soup", "23 Aug, 10:30 PM", "x15", "Orman Association"),
+          requestCard(context, "Vegetable Salad", "24 Aug, 1:00 PM", "x10", "Food Bank"),
           ],
         ),
       ),
