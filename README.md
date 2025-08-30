@@ -19,6 +19,7 @@ In **Egypt**, more than **18 million tons** of food are wasted annually – a hu
 ---
 
 ## 📱 App Screenshots  
+<img width="1920" height="1080" alt="Clean and Modern App Portfolio Mockup Presentation" src="https://github.com/user-attachments/assets/1256388e-87c6-4ebe-8044-296334748d5f" />
 
 ---
 
