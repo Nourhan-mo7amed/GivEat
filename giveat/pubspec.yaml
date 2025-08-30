@@ -42,6 +42,8 @@ dependencies:
   geocoding: ^4.0.0
   lucide_icons: ^0.257.0
   image_picker: ^1.2.0
+  lottie: ^3.3.1
+  smooth_page_indicator: ^1.2.1
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +72,8 @@ flutter:
     - assets/images/
     - assets/icons_images/
     - assets/fonts/
+    - assets/animations/
+    
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

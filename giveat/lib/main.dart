@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:giveat/feature/splash_screen.dart';
+import 'package:giveat/feature/intro/splash_screen.dart';
 
 
 void main() {

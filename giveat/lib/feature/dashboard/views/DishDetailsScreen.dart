@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:giveat/color.dart';
+import 'package:giveat/core/constant/color.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../../../auth/ui/widgets/reusable_text_field.dart';
+import '../../auth/widgets/reusable_text_field.dart';
 
 class DishDetailsScreen extends StatefulWidget {
   const DishDetailsScreen({super.key});

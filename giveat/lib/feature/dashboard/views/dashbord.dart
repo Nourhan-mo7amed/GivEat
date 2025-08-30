@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:giveat/color.dart';
+import 'package:giveat/core/constant/color.dart';
 import 'ChatScreen.dart';
 import 'DashboardHome.dart';
 import 'ProfileScreen.dart';
@@ -16,7 +16,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    const DashboardHome(), // 👈 دي هتكون محتوى الهوم اللي كتبتيه
+    const DashboardHome(),
     const RequestsScreen(),
     const ProfileScreen(),
     const ChatScreen(),
@@ -35,7 +35,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.primaryColor,
         onPressed: () {
-          // هنا تحطي الأكشن اللي انتي عاوزاه
           ScaffoldMessenger.of(
             context,
           ).showSnackBar(const SnackBar(content: Text("Plus Button Pressed!")));
@@ -61,7 +60,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
         ],
       ),
-      body: _screens[_currentIndex], // ✅ كل مرة يغير محتوى البودي
-    );
+      body: _screens[_currentIndex],   );
   }
 }

@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:giveat/color.dart';
+import 'package:giveat/core/constant/color.dart';
 
 import 'DishDetailsScreen.dart';
 
@@ -23,12 +23,9 @@ class DonatedDishDetailsScreen extends StatelessWidget {
   void _showDeleteDialog(BuildContext context) {
     showDialog(
       context: context,
-      barrierDismissible: false, // لازم يختار زرار
-      barrierColor: Colors.black.withOpacity(0.3), // شفاف خلفية
-      builder: (context) {
+      barrierDismissible: false,barrierColor: Colors.black.withOpacity(0.3), builder: (context) {
         return BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4), // البلور هنا
-          child: AlertDialog(
+          filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),       child: AlertDialog(
             backgroundColor: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
@@ -47,10 +44,8 @@ class DonatedDishDetailsScreen extends StatelessWidget {
             actions: [
               Row(
                 children: [
-                  // زر Cancel
                   Expanded(
-                    flex: 3, // مساحة أقل
-                    child: OutlinedButton(
+                    flex: 3,  child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
                         side: const BorderSide(color: Colors.black45),
                         shape: RoundedRectangleBorder(
@@ -66,7 +61,6 @@ class DonatedDishDetailsScreen extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
 
-                  // زر Delete
                   Expanded(
                     flex: 5, child: ElevatedButton(
                       style: ElevatedButton.styleFrom(

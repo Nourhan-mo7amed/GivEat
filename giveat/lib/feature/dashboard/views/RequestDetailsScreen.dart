@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../color.dart';
+import '../../../core/constant/color.dart';
 
 class RequestDetailsScreen extends StatelessWidget {
   final String title;

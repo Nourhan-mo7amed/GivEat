@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../color.dart';
+import '../../../core/constant/color.dart';
 import 'OTP_Page.dart';
 
 class ForgetPage extends StatelessWidget {

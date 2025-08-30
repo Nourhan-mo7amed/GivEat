@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../../../../color.dart';
+import '../../../core/constant/color.dart';
 import '../views/DonatedDishDetailsScreen.dart';
 
 Widget donatedDish(BuildContext context, String title, String qty, String desc, String price) {
@@ -15,8 +15,7 @@ Widget donatedDish(BuildContext context, String title, String qty, String desc, 
             quantity: qty,
             description: desc,
             price: price,
-            image: "assets/images/a.jpg", // تقدر تخليها باراميتر لو الصور مختلفة
-          ),
+            image: "assets/images/a.jpg", ),
         ),
       );
     },

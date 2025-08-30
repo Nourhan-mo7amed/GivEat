@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giveat/feature/auth/ui/views/login.dart';
-import '../../../../color.dart';
+import 'package:giveat/feature/auth/views/login.dart';
+import '../../../core/constant/color.dart';
 import '../widgets/reusable_text_field.dart';import 'NextPage.dart';
 
 class SignUp extends StatefulWidget {

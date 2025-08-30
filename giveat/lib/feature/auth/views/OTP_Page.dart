@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
-import '../../../../color.dart';
+import '../../../core/constant/color.dart';
 import 'New_Passward_Page.dart';
 
 class OTP_Page extends StatelessWidget {

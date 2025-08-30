@@ -1,9 +1,7 @@
-// Splash Screen
 
 import 'package:flutter/material.dart';
-import 'package:giveat/color.dart';
-
-import 'auth/ui/views/login.dart';
+import 'package:giveat/core/constant/color.dart';
+import 'onbording.dart'; 
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
+        MaterialPageRoute(builder: (context) => const OnBoardingScreen()), 
       );
     });
   }
@@ -37,7 +35,6 @@ class _SplashScreenState extends State<SplashScreen> {
               "GivEat",
               style: TextStyle(
                 fontSize: 35,
-                //fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,
                 fontFamily: 'RussoOne',
               ),

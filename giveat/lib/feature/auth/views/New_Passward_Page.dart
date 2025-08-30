@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../color.dart';
+import '../../../core/constant/color.dart';
 import '../widgets/reusable_text_field.dart';
 class New_Passward extends StatefulWidget {
   const New_Passward({super.key});

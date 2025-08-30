@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:giveat/feature/auth/ui/views/Forget_Page.dart';
-import 'package:giveat/feature/auth/ui/views/role.dart';
-import '../../../../color.dart';
+import 'package:giveat/feature/auth/views/Forget_Page.dart';
+import 'package:giveat/feature/auth/views/role.dart';
+import '../../../core/constant/color.dart';
 import '../widgets/reusable_text_field.dart';
-import '../../../dashboard/ui/views/dashbord.dart';
+import '../../dashboard/views/dashbord.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

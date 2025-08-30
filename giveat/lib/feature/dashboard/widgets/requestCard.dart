@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import '../../../../color.dart';
-import '../views/RequestDetailsScreen.dart'; // استوردي صفحة التفاصيل
-
+import '../../../core/constant/color.dart';
+import '../views/RequestDetailsScreen.dart'; 
 Widget requestCard(
-    BuildContext context, // خدنا الكونتكست هنا
-    String title,
+    BuildContext context, String title,
     String time,
     String qty,
     String postedBy,
   ) {
   return InkWell(
     onTap: () {
-      // لما يضغط على الكارت يروح للتفاصيل
      Navigator.push(
   context,
   MaterialPageRoute(
@@ -33,7 +30,6 @@ Widget requestCard(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // صورة + تفاصيل
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
