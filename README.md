@@ -1,4 +1,4 @@
-# GIVEAT 🍴  
+# GIVEAT 
 *A smart bridge between surplus food and those who need it most*  
 
 ---
@@ -22,7 +22,8 @@ In **Egypt**, more than **18 million tons** of food are wasted annually – a hu
 
 | Onboarding | Donor Portal | Recipient Portal | Matching System |
 |------------|--------------|------------------|-----------------|
-| ![onboarding](screenshots/onboarding.png) | ![donor](screenshots/donor.png) | ![recipient](screenshots/recipient.png) | ![matching](screenshots/matching.png) |
+| ![onboarding](screenshots/<img width="1440" height="3200" alt="Sign Up 1" src="https://github.com/user-attachments/assets/fe7b62ed-a353-4c45-a9ee-1a3bfd0ce060" />
+onboarding.png) | ![donor](screenshots/donor.png) | ![recipient](screenshots/recipient.png) | ![matching](screenshots/matching.png) |
 
 *(Add your actual app screenshots inside a `screenshots/` folder in the repo)*  
 
