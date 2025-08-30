@@ -20,14 +20,6 @@ In **Egypt**, more than **18 million tons** of food are wasted annually – a hu
 
 ## 📱 App Screenshots  
 
-| Onboarding | Donor Portal | Recipient Portal | Matching System |
-|------------|--------------|------------------|-----------------|
-| <img width="1440" height="3200" alt="Sign Up 1" src="https://github.com/user-attachments/assets/fe7b62ed-a353-4c45-a9ee-1a3bfd0ce060" />
- |<img width="1440" height="3200" alt="Splash Screen 3" src="https://github.com/user-attachments/assets/256995ef-9700-40e8-ab58-a657e6acc39b" />
- | ![recipient](screenshots/recipient.png) | ![matching](screenshots/matching.png) |
-
-*(Add your actual app screenshots inside a `screenshots/` folder in the repo)*  
-
 ---
 
 ## 🎯 Mission & Impact  
